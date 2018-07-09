@@ -9,7 +9,8 @@ app.use(express.static(__dirname + '/weather-app-new/dist'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile('index.html', {"root": __dirname});
+    const index = path.join(__dirname, 'build', 'index.html');
+    res.sendFile(index);
 });
 
 // Start the app by listening on the default Heroku port
