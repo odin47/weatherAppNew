@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/weather-app-new/dist'));
 
 app.get('/*', function(req,res) {
     
-    const index = path.join(__dirname, 'build', 'index.html');
+    const index = path.join(__dirname, 'index.html');
     res.sendFile(index);
 });
 
