@@ -5,11 +5,11 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/weather-app-new/dist'));
+app.use(express.static(__dirname + '/dist/weatherAppNew'));
 
 app.get('/*', function(req,res) {
     
-    const index = path.join(__dirname,'dist', 'index.html');
+    const index = path.join(__dirname,'dist', 'weatherAppNew', 'index.html');
     res.sendFile(index);
 });
 
